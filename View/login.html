@@ -13,25 +13,28 @@
 	<!-- 引入组件库 -->
 	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 	<script src="/Script/login.js"></script>
+	<link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
 	<div id="app">
-		<el-row>
-			<el-col :span="3">
-				<el-input v-model="input" placeholder="账号"></el-input>
-			</el-col>
-		</el-row>
-		<el-row>
-			<el-col :span="3">
-				<el-input v-model="password" placeholder="密码"></el-input>
-			</el-col>
-		</el-row>
-		<el-row>
-			<el-col :span="3">
-				<el-button type="primary">登陆</el-button>
-			</el-col>
-		</el-row>
+		<el-card>
+			<el-row>
+				<el-col :span="24">
+					<el-input v-model="input" placeholder="账号"></el-input>
+				</el-col>
+			</el-row>
+			<el-row>
+				<el-col :span="24">
+					<el-input v-model="password" type="password" placeholder="密码"></el-input>
+				</el-col>
+			</el-row>
+			<el-row>
+				<el-col :span="24">
+					<el-button type="primary" id="btn_login">登陆</el-button>
+				</el-col>
+			</el-row>
+		</el-card>
 	</div>
 </body>
 
