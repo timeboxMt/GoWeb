@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>登陆</title>
+	<!--引入jquery-->
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- 先引入 Vue -->
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script src="/Script/login.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<el-row>
+			<el-col :span="3">
+				<el-input v-model="input" placeholder="账号"></el-input>
+			</el-col>
+		</el-row>
+		<el-row>
+			<el-col :span="3">
+				<el-input v-model="password" placeholder="密码"></el-input>
+			</el-col>
+		</el-row>
+		<el-row>
+			<el-col :span="3">
+				<el-button type="primary">登陆</el-button>
+			</el-col>
+		</el-row>
+	</div>
+</body>
+
+</html>

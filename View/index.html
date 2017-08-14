@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <!--引入jquery-->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 先引入 Vue -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <script src="../Script/index.js"></script>
+</head>
+
+<body>
+    <div>
+        <el-row>
+            <el-col :span="12">
+                <div class="grid-content bg-purple-dark">
+                    <el-span>聊天室</el-span>
+                </div>
+            </el-col>
+        </el-row>
+    </div>
+
+    <div id="app-2">
+        <el-row>
+            <el-col :span="1">
+                <span>用户名：</kspan>
+            </el-col>
+            <el-col :span="2">
+                <el-input v-model="input" size="small" placeholder="用户名"></el-input>
+            </el-col>
+        </el-row>
+
+        <el-row>
+            <el-col :span="1">
+                <span>密码：</kspan>
+            </el-col>
+            <el-col :span="2">
+                <el-input type="password" v-model="password" size="small" placeholder="密码"></el-input>
+            </el-col>
+        </el-row>
+    </div> 
+
+    <div id="app-3">
+        <el-row>
+          <el-col :span="2"></el-col>
+        </el-row>
+    </div>
+</body>
+
+</html>
