@@ -19,11 +19,12 @@ func httpEntrance() {
 	//http.Handle("/static/", http.StripPrefix("/Script/", http.FileServer(http.Dir("Script"))))
 	//http.Handle("/Script/", http.FileServer(http.Dir("Script")))
 
-	fsh := http.FileServer(http.Dir("F:/goWork/GoWeb/template/Script"))
-	http.Handle("/Script/", http.StripPrefix("/Script/", fsh))
+	fshjs := http.FileServer(http.Dir("F:/goWork/GoWeb/template/Script"))
+	http.Handle("/Script/", http.StripPrefix("/Script/", fshjs))
 
-	fshCss := http.FileServer(http.Dir("F:/goWork/GoWeb/template/css"))
-	http.Handle("/css/", http.StripPrefix("/css/", fshCss))
+	fshcss := http.FileServer(http.Dir("F:/goWork/GoWeb/template/css"))
+	http.Handle("/css/", http.StripPrefix("/css/", fshcss))
 
 	http.HandleFunc("/login", controllers.Login)
+	http.HandleFunc("/index", controllers.SayhelloName)
 }

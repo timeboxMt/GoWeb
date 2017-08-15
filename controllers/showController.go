@@ -1,21 +1,15 @@
 package controllers
 
 import (
-	"fmt"
+	"html/template"
 	"net/http"
-	"strings"
 )
 
 //SayhelloName 输出Hello
 func SayhelloName(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
-	fmt.Println(r.Form)
-	fmt.Println("Path", r.URL.Path)
-	fmt.Println("Scheme", r.URL.Scheme)
-	fmt.Println(r.Form["url_long"])
-	for k, v := range r.Form {
-		fmt.Println("Key:", k)
-		fmt.Println("Val:", strings.Join(v, ""))
+	if r.Method == "GET" {
+		t, _ := template.ParseFiles("../View/index.html")
+		t.Execute(w, nil)
 	}
-	fmt.Fprintf(w, "Hello astaxie!")
 }

@@ -5,18 +5,17 @@ $(function () {
 
 
 function MainVue() {
-    new Vue({
-        el: '#app-1',
-        data: function () {
-            return { visible: false }
+    export default {
+        data() {
+            return {
+                activeIndex: '1',
+                activeIndex2: '1'
+            };
+        },
+        methods: {
+            handleSelect(key, keyPath) {
+                console.log(key, keyPath);
+            }
         }
-    });
-
-    new Vue({
-        el: '#app-2',
-        data: {
-            input: '',
-            password: ''
-        }
-    });
+    }
 }
