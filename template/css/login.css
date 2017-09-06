@@ -1,17 +1,15 @@
-body{}
-
-#app{
+#app {
     width: 450px;
     margin-top: 300px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.el-card{
+.el-card {
     height: 320px;
 }
 
-.el-row{
+.el-row {
     margin-top: 20px;
     text-align: center;
 }
