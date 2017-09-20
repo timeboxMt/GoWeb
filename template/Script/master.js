@@ -41,3 +41,8 @@ function isPhone(data) {
 function isEmail(data) {
 
 }
+
+//验证是否身份证
+function isIDCard(data) {
+
+}
